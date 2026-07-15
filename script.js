@@ -124,12 +124,20 @@ function renderPastCommittees() {
       <div class="acc-body">
         <div class="grid grid-3">
           ${group.members.map(m => `
-            <div class="card" style="padding:16px; display:flex; flex-direction:column;">
-              <div class="role" style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;color:var(--rgc-orange-dark);">${m.role}</div>
-              <div style="font-weight:700;margin-top:4px;">
-                ${m.slug ? `<a href="member.html?slug=${encodeURIComponent(m.slug)}" style="color:inherit; text-decoration:none;">${m.name}</a>` : m.name}
+            <div class="card" style="padding:16px; display:flex; flex-direction:column; gap:12px;">
+              
+              <!-- 👇 The Avatar code is now added here 👇 -->
+              <div class="avatar" style="width: 56px; height: 56px;">
+                ${m.photo ? `<img src="${m.photo}" alt="${m.name}">` : initials(m.name)}
               </div>
-              <div class="text-soft" style="font-size:13px;">${m.batch || m.series || ""}</div>
+              
+              <div>
+                <div class="role" style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;color:var(--rgc-orange-dark);">${m.role}</div>
+                <div style="font-weight:700;margin-top:4px;">
+                  ${m.slug ? `<a href="member.html?slug=${encodeURIComponent(m.slug)}" style="color:inherit; text-decoration:none;">${m.name}</a>` : m.name}
+                </div>
+                <div class="text-soft" style="font-size:13px;">${m.batch || m.series || ""}</div>
+              </div>
               
               <div class="social-icons-row" style="margin-top:auto; padding-top:12px;">
                 ${m.website ? `<a href="${m.website}" target="_blank" title="Website">${iconWeb}</a>` : ""}
