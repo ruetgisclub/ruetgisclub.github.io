@@ -95,7 +95,7 @@ const PAST_COMMITTEES = [
   {
     label: "Executive Committee 2025-2026",
     members: [
-      { slug: "tasnim-mahmud-rifat", name: "Tasnim Mahmud Rifat", role: "President", series: "URP'19 Series", photo: "", email: "", linkedin: "", website: "", bio: "" },
+      { slug: "tasnim-mahmud-rifat", name: "Tasnim Mahmud Rifat", role: "President", series: "URP'19 Series", photo: "https://raw.githubusercontent.com/ruetgisclub/ruetgisclub.github.io/refs/heads/main/Assets/exe-mem-26/president.jpeg", email: "", linkedin: "", website: "", bio: "" },
       { slug: "towfiqur-rashid", name: "Towfiqur Rashid", role: "Vice President", series: "URP'20 Series", photo: "", email: "", linkedin: "", website: "", bio: "" },
       { slug: "imtiaj-iqbal-mahfuj", name: "Imtiaj Iqbal Mahfuj", role: "General Secretary", series: "URP'21 Series", photo: "", email: "", linkedin: "", website: "", bio: "" },
       { slug: "md-habibullah-masbah", name: "Md Habibullah Masbah", role: "Joint Secretary", series: "URP'21 Series", photo: "", email: "", linkedin: "", website: "", bio: "" },
