@@ -41,26 +41,26 @@ const ADVISORS = [
     name: "Dr. Md. Mostafizur Rahman",
     title: "Professor",
     dept: "Department of Urban & Regional Planning, RUET",
-    photo: "https://raw.githubusercontent.com/imtiajiqbalmahfuj/rgisclub/refs/heads/main/Assets/Advisors/photo302.jpg",
+    photo: "https://raw.githubusercontent.com/ruetgisclub/ruetgisclub.github.io/refs/heads/main/Assets/Advisors/photo302.jpg",
     speech: "As an advisor, I am thrilled to support our vibrant community exploring Geographic Information Systems (GIS). Our club offers hands-on experience through workshops, seminars, and projects, enhancing both academic and professional growth. GIS is essential for urban planning, environmental management, and more, enabling us to visualize and analyze spatial data for informed decision-making. Join us in this exciting journey to explore GIS's limitless possibilities and make a meaningful impact. Thank you for your interest and support."
   },
   {
     name: "Md. Sakib Zubayer",
     title: "Assistant Professor",
     dept: "Department of Urban & Regional Planning, RUET",
-    photo: "https://raw.githubusercontent.com/imtiajiqbalmahfuj/rgisclub/refs/heads/main/Assets/Advisors/photo305.jpg",
+    photo: "https://raw.githubusercontent.com/ruetgisclub/ruetgisclub.github.io/refs/heads/main/Assets/Advisors/photo305.jpg",
     speech: "As the advisor, I extend a warm welcome to our community. With enthusiasm, we explore Geographic Information Systems (GIS) and its applications. GIS is vital in urban planning, disaster management, and beyond. Through workshops, seminars, and projects, we delve deeper into GIS's potential. Let's embark on a journey of innovation, addressing real-world challenges. Your involvement is crucial to our success. Thank you for choosing the RUET GIS Club. Together, we'll make a difference."
   },
   {
     name: "Muhaiminul Islam",
     title: "Assistant Professor",
-    photo: "https://raw.githubusercontent.com/imtiajiqbalmahfuj/rgisclub/refs/heads/main/Assets/Advisors/photo27.jpg",
+    photo: "https://raw.githubusercontent.com/ruetgisclub/ruetgisclub.github.io/refs/heads/main/Assets/Advisors/photo27.jpg",
     dept: "Department of Urban & Regional Planning, RUET"
   },
   {
     name: "Jahid Hasan",
     title: "Assistant Professor",
-    photo: "https://raw.githubusercontent.com/imtiajiqbalmahfuj/rgisclub/refs/heads/main/Assets/Advisors/photo932.jpg",
+    photo: "https://raw.githubusercontent.com/ruetgisclub/ruetgisclub.github.io/refs/heads/main/Assets/Advisors/photo932.jpg",
     dept: "Department of Urban & Regional Planning, RUET"
   }
 ];
