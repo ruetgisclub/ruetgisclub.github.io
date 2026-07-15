@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Resources — RUET GIS Club</title>
+<meta name="description" content="GIS datasets, software, and recorded sessions shared by RUET GIS Club.">
+<link rel="icon" type="image/png" href="Assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script defer src="data.js"></script>
+<script defer src="script.js"></script>
+</head>
+<body data-page="resources">
+
+<header id="site-header">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <img src="Assets/logo-icon-512.png" alt="RUET GIS Club mark">
+      <span>RUET GIS Club<small>Rajshahi University of Engineering &amp; Technology</small></span>
+    </a>
+    <nav class="main-nav">
+      <a data-nav="home" href="index.html">Home</a>
+      <a data-nav="about" href="about.html">About</a>
+      <a data-nav="members" href="members.html">Members</a>
+      <a data-nav="notices" href="notices.html">Notices</a>
+      <a data-nav="resources" href="resources.html">Resources</a>
+      <a data-nav="activities" href="activities.html">Activities</a>
+      <a data-nav="constitution" href="constitution.html">Constitution</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn">Menu</button>
+  </div>
+  <div id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="members.html">Members</a>
+    <a href="notices.html">Notices</a>
+    <a href="resources.html">Resources</a>
+    <a href="activities.html">Activities</a>
+    <a href="constitution.html">Constitution</a>
+  </div>
+</header>
+
+<section class="tight" style="padding-top:64px;">
+  <div class="wrap">
+    <span class="coord">SHARED LAYERS</span>
+    <h1 class="section-title mt-16">Resources</h1>
+    <p class="section-sub">Datasets, software, and recorded sessions for club members.</p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <span class="eyebrow">Datasets</span>
+    <h2 class="section-title" style="font-size:26px;">Materials</h2>
+    <div class="grid grid-2 mt-24" id="resDataList"></div>
+  </div>
+</section>
+
+<section class="tight" style="background:var(--rgc-paper-soft); border-top:1px solid var(--rgc-line); border-bottom:1px solid var(--rgc-line);">
+  <div class="wrap">
+    <span class="eyebrow">Tools</span>
+    <h2 class="section-title" style="font-size:26px;">Software</h2>
+    <div class="grid grid-2 mt-24" id="resSoftwareList"></div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <span class="eyebrow">Watch &amp; learn</span>
+    <h2 class="section-title" style="font-size:26px;">Recorded Sessions</h2>
+    <div class="grid grid-2 mt-24" id="resSessionList"></div>
+  </div>
+</section>
+
+<footer id="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:10px;">
+          <img src="Assets/logo-icon-512.png" alt="RUET GIS Club mark" style="height:30px;">
+          <span>RUET GIS Club</span>
+        </div>
+        <p class="text-soft" style="font-size:14px; max-width:280px; line-height:1.6;">
+          Department of Urban &amp; Regional Planning, Rajshahi University of Engineering &amp; Technology.
+        </p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <a href="about.html">About</a>
+        <a href="members.html">Members</a>
+        <a href="notices.html">Notices</a>
+        <a href="activities.html">Activities</a>
+      </div>
+      <div>
+        <h4>More</h4>
+        <a href="resources.html">Resources</a>
+        <a href="constitution.html">Constitution</a>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <a href="mailto:ruetgisclub@gmail.com" data-site-email>ruetgisclub@gmail.com</a>
+        <a href="https://facebook.com/ruetgisclub">Facebook</a>
+        <a href="https://linkedin.com/company/ruetgisclub">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="copyYear"></span> RUET GIS Club. All rights reserved.</span>
+      <span>Site by Imtiaj Iqbal Mahfuj, President, EC 2026-2027</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

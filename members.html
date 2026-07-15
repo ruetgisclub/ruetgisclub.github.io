@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Members — RUET GIS Club</title>
+<meta name="description" content="Advisors, Executive Committee 2026-27, past committees, general members, and alumni of RUET GIS Club.">
+<link rel="icon" type="image/png" href="Assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script defer src="data.js"></script>
+<script defer src="script.js"></script>
+</head>
+<body data-page="members">
+
+<header id="site-header">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <img src="Assets/logo-icon-512.png" alt="RUET GIS Club mark">
+      <span>RUET GIS Club<small>Rajshahi University of Engineering &amp; Technology</small></span>
+    </a>
+    <nav class="main-nav">
+      <a data-nav="home" href="index.html">Home</a>
+      <a data-nav="about" href="about.html">About</a>
+      <a data-nav="members" href="members.html">Members</a>
+      <a data-nav="notices" href="notices.html">Notices</a>
+      <a data-nav="resources" href="resources.html">Resources</a>
+      <a data-nav="activities" href="activities.html">Activities</a>
+      <a data-nav="constitution" href="constitution.html">Constitution</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn">Menu</button>
+  </div>
+  <div id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="members.html">Members</a>
+    <a href="notices.html">Notices</a>
+    <a href="resources.html">Resources</a>
+    <a href="activities.html">Activities</a>
+    <a href="constitution.html">Constitution</a>
+  </div>
+</header>
+
+<section class="tight" style="padding-top:64px;">
+  <div class="wrap">
+    <span class="coord">THE PEOPLE BEHIND THE MAPS</span>
+    <h1 class="section-title mt-16">Members</h1>
+    <p class="section-sub">Advisors, the current Executive Committee, past committees, general members, and alumni.</p>
+  </div>
+</section>
+
+<!-- ADVISORY BOARD -->
+<section class="tight" id="advisors">
+  <div class="wrap">
+    <span class="eyebrow">Advisory Board</span>
+    <h2 class="section-title">Our Advisors</h2>
+    <div class="grid grid-4 mt-24" id="advisorGrid"></div>
+  </div>
+</section>
+
+<div class="layer-divider"><span class="l1"></span><span class="l2"></span><span class="l3"></span><span class="l4"></span></div>
+
+<!-- CURRENT EC -->
+<section id="executive-committee">
+  <div class="wrap">
+    <span class="eyebrow">Session 2026&ndash;27</span>
+    <h2 class="section-title">Executive Committee</h2>
+    <p class="section-sub">Selected by the advisory board &middot; Ref: RGC/2026/0013. Click a name to view their profile.</p>
+    <div class="grid grid-3 mt-40" id="ecGrid"></div>
+  </div>
+</section>
+
+<!-- PAST COMMITTEES -->
+<section id="past-committees" style="background:var(--rgc-paper-soft); border-top:1px solid var(--rgc-line); border-bottom:1px solid var(--rgc-line);">
+  <div class="wrap">
+    <span class="eyebrow">Where we've been</span>
+    <h2 class="section-title">Past Committees</h2>
+    <div class="mt-24" id="pastCommittees"></div>
+  </div>
+</section>
+
+<!-- GENERAL MEMBERS -->
+<section id="general-members">
+  <div class="wrap">
+    <span class="eyebrow">The wider club</span>
+    <h2 class="section-title">General Members <span class="text-soft" style="font-weight:400; font-size:16px;">(<span id="generalMembersCount">0</span>+)</span></h2>
+    <div class="card mt-24" style="padding:0; overflow-x:auto;">
+      <table class="simple">
+        <thead><tr><th>#</th><th>Name</th><th>Student ID</th></tr></thead>
+        <tbody id="generalMembersBody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ALUMNI -->
+<section id="alumni" style="background:var(--rgc-paper-soft); border-top:1px solid var(--rgc-line);">
+  <div class="wrap">
+    <span class="eyebrow">Living history</span>
+    <h2 class="section-title">Our Alumni</h2>
+    <div class="grid grid-3 mt-40" id="alumniGrid"></div>
+  </div>
+</section>
+
+<footer id="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:10px;">
+          <img src="Assets/logo-icon-512.png" alt="RUET GIS Club mark" style="height:30px;">
+          <span>RUET GIS Club</span>
+        </div>
+        <p class="text-soft" style="font-size:14px; max-width:280px; line-height:1.6;">
+          Department of Urban &amp; Regional Planning, Rajshahi University of Engineering &amp; Technology.
+        </p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <a href="about.html">About</a>
+        <a href="members.html">Members</a>
+        <a href="notices.html">Notices</a>
+        <a href="activities.html">Activities</a>
+      </div>
+      <div>
+        <h4>More</h4>
+        <a href="resources.html">Resources</a>
+        <a href="constitution.html">Constitution</a>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <a href="mailto:ruetgisclub@gmail.com" data-site-email>ruetgisclub@gmail.com</a>
+        <a href="https://facebook.com/ruetgisclub">Facebook</a>
+        <a href="https://linkedin.com/company/ruetgisclub">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="copyYear"></span> RUET GIS Club. All rights reserved.</span>
+      <span>Site by Imtiaj Iqbal Mahfuj, President, EC 2026-2027</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

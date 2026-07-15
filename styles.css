@@ -1,0 +1,475 @@
+/* ==========================================================================
+   RUET GIS Club — Design Tokens & Shared Styles
+   Palette pulled from the club mark: pin-orange, map-green, sky-blue, amber.
+   Background stays white/paper; ink is a soft near-black, not pure #000.
+   ========================================================================== */
+
+:root {
+  /* Brand colors — from the club logo */
+  --rgc-orange: #E45A2B;   /* pin */
+  --rgc-orange-dark: #C74A20;
+  --rgc-green: #8CC63F;    /* map fold */
+  --rgc-blue: #4FC3E8;     /* base layer */
+  --rgc-amber: #FDB913;    /* frame */
+
+  /* Neutrals */
+  --rgc-ink: #262523;      /* primary text — soft black */
+  --rgc-ink-soft: #5B5854;
+  --rgc-paper: #FFFFFF;
+  --rgc-paper-soft: #FAFAF7;
+  --rgc-line: #E7E4DD;
+  --rgc-line-strong: #C9C5BC;
+
+  /* Type */
+  --font-display: 'Space Grotesk', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  --container: 1120px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--rgc-ink);
+  background: var(--rgc-paper);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: var(--rgc-ink);
+}
+
+a { color: inherit; text-decoration: none; }
+
+.wrap {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Coordinate eyebrow (signature typographic device) ---------- */
+.coord {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rgc-ink-soft);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.coord::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--rgc-orange);
+  display: inline-block;
+}
+
+/* ---------- Layer-stack divider (signature element) ----------
+   A row of the four brand colors, like map layer swatches.
+   Used instead of a plain hairline between major sections. */
+.layer-divider {
+  height: 4px;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.layer-divider span { flex: 1; }
+.layer-divider .l1 { background: var(--rgc-orange); }
+.layer-divider .l2 { background: var(--rgc-amber); }
+.layer-divider .l3 { background: var(--rgc-green); }
+.layer-divider .l4 { background: var(--rgc-blue); }
+
+.layer-tag {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+.layer-tag i { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+.layer-tag .i1 { background: var(--rgc-orange); }
+.layer-tag .i2 { background: var(--rgc-amber); }
+.layer-tag .i3 { background: var(--rgc-green); }
+.layer-tag .i4 { background: var(--rgc-blue); }
+
+/* ---------- Navbar ---------- */
+#site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rgc-line);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--rgc-ink);
+}
+.brand img { height: 34px; width: auto; display: block; }
+.brand small {
+  display: block;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--rgc-ink-soft);
+  text-transform: uppercase;
+}
+
+nav.main-nav {
+  display: flex;
+  gap: 4px;
+}
+nav.main-nav a {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: var(--rgc-ink-soft);
+  transition: all .15s ease;
+}
+nav.main-nav a:hover { color: var(--rgc-ink); background: var(--rgc-paper-soft); }
+nav.main-nav a.active { color: var(--rgc-paper); background: var(--rgc-ink); }
+
+.menu-btn {
+  display: none;
+  border: 1px solid var(--rgc-line-strong);
+  background: none;
+  border-radius: 10px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+#mobile-nav {
+  display: none;
+  border-bottom: 1px solid var(--rgc-line);
+  background: var(--rgc-paper);
+}
+#mobile-nav.open { display: block; }
+#mobile-nav a {
+  display: block;
+  padding: 14px 24px;
+  font-size: 15px;
+  border-bottom: 1px solid var(--rgc-line);
+}
+
+@media (max-width: 860px) {
+  nav.main-nav { display: none; }
+  .menu-btn { display: inline-flex; align-items: center; gap: 6px; }
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.btn-primary { background: var(--rgc-ink); color: #fff; }
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(38,37,35,0.18); }
+.btn-outline { background: transparent; border-color: var(--rgc-line-strong); color: var(--rgc-ink); }
+.btn-outline:hover { border-color: var(--rgc-ink); }
+.btn-accent { background: var(--rgc-orange); color: #fff; }
+.btn-accent:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(228,90,43,0.28); }
+
+/* ---------- Sections ---------- */
+section { padding: 88px 0; }
+section.tight { padding: 56px 0; }
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--rgc-orange-dark);
+  margin-bottom: 14px;
+  display: block;
+}
+.section-title {
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.15;
+  max-width: 720px;
+}
+.section-sub {
+  color: var(--rgc-ink-soft);
+  font-size: 16px;
+  max-width: 640px;
+  margin-top: 14px;
+  line-height: 1.6;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  border: 1px solid var(--rgc-line);
+  border-radius: 18px;
+  background: var(--rgc-paper);
+  padding: 26px;
+}
+.card:hover { border-color: var(--rgc-line-strong); }
+
+.grid { display: grid; gap: 20px; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 860px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 560px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+/* ---------- Stat blocks ---------- */
+.stat {
+  border: 1px solid var(--rgc-line);
+  border-radius: 16px;
+  padding: 22px;
+  text-align: left;
+}
+.stat .num {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 700;
+}
+.stat .label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--rgc-ink-soft);
+  margin-top: 4px;
+  display: block;
+}
+
+/* ---------- People cards (members/EC) ---------- */
+.person {
+  border: 1px solid var(--rgc-line);
+  border-radius: 18px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform .15s ease, border-color .15s ease;
+}
+.person:hover { transform: translateY(-3px); border-color: var(--rgc-line-strong); }
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  background: var(--rgc-paper-soft);
+  border: 1px solid var(--rgc-line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--rgc-ink-soft);
+  overflow: hidden;
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+.person .role {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--rgc-orange-dark);
+}
+.person .name { font-size: 17px; font-weight: 700; font-family: var(--font-display); }
+.person .meta { font-size: 13px; color: var(--rgc-ink-soft); }
+
+/* ---------- Table (general members, notices) ---------- */
+table.simple {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+table.simple th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--rgc-ink-soft);
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--rgc-line-strong);
+}
+table.simple td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--rgc-line);
+}
+table.simple tr:hover td { background: var(--rgc-paper-soft); }
+
+/* ---------- Footer ---------- */
+#site-footer {
+  border-top: 1px solid var(--rgc-line);
+  background: var(--rgc-paper-soft);
+  padding: 56px 0 28px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 32px;
+}
+@media (max-width: 760px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+#site-footer h4 {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--rgc-ink-soft);
+  margin-bottom: 14px;
+}
+#site-footer a {
+  display: block;
+  font-size: 14px;
+  color: var(--rgc-ink-soft);
+  padding: 6px 0;
+}
+#site-footer a:hover { color: var(--rgc-orange-dark); }
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rgc-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--rgc-ink-soft);
+}
+
+/* ---------- Hero graticule background (signature motif) ---------- */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--rgc-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--rgc-line) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at 50% 0%, black 0%, transparent 75%);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* ---------- Utility ---------- */
+.badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--rgc-paper-soft);
+  border: 1px solid var(--rgc-line);
+  color: var(--rgc-ink-soft);
+}
+.pill-row { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.center { text-align: center; }
+.mt-8 { margin-top: 8px; } .mt-16 { margin-top: 16px; } .mt-24 { margin-top: 24px; } .mt-40 { margin-top: 40px; }
+.text-soft { color: var(--rgc-ink-soft); }
+
+details.acc summary {
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 600;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rgc-line);
+  list-style: none;
+}
+details.acc summary::-webkit-details-marker { display: none; }
+details.acc[open] summary { color: var(--rgc-orange-dark); }
+details.acc .acc-body { padding: 0 0 20px; color: var(--rgc-ink-soft); line-height: 1.7; }
+
+.const-toc {
+  border: 1px solid var(--rgc-line);
+  border-radius: 16px;
+  padding: 22px 26px;
+  background: var(--rgc-paper-soft);
+}
+.const-toc a { display: block; padding: 5px 0; font-size: 14px; }
+.const-toc a:hover { color: var(--rgc-orange-dark); }
+
+.article-block h3 {
+  font-size: 20px;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rgc-line);
+}
+.article-block h4 { font-size: 15px; margin-top: 20px; }
+.article-block p { line-height: 1.75; color: var(--rgc-ink-soft); font-size: 15px; }
+
+/* Navigation Dropdown */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--rgc-paper);
+  min-width: 220px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border: 1px solid var(--rgc-line);
+  border-radius: 8px;
+  z-index: 100;
+  padding: 8px 0;
+  flex-direction: column;
+}
+.nav-dropdown:hover .dropdown-content {
+  display: flex;
+}
+.dropdown-content a {
+  padding: 8px 16px;
+  color: var(--rgc-ink);
+  text-decoration: none;
+  font-size: 14px;
+}
+.dropdown-content a:hover {
+  background-color: var(--rgc-paper-soft);
+  color: var(--rgc-accent);
+}
+
+/* Social Icons on Cards */
+.social-icons-row {
+  display: flex;
+  gap: 12px;
+}
+.social-icons-row a {
+  color: var(--rgc-ink-soft);
+  transition: color 0.2s;
+  display: flex;
+}
+.social-icons-row a:hover {
+  color: var(--rgc-accent);
+}
