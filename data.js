@@ -117,7 +117,6 @@ const PAST_COMMITTEES = [
   {
     label: "Executive Committee 2024-2025",
     members: [
-      { slug: "rubayet-arafin-rimon", name: "Rubayet Arafin Rimon", role: "President", series: "URP'19 Series", photo: "", email: "", linkedin: "", website: "", bio: "" },
       { slug: "junaid-imam-adib", name: "Junaid Imam Adib", role: "Vice-president", series: "URP'19 Series", photo: "https://raw.githubusercontent.com/ruetgisclub/ruetgisclub.github.io/refs/heads/main/Assets/exe-mem-25/vp.jpg", email: "", linkedin: "", website: "", bio: "Vice-President, RUET GIS Club, 2024-2025" },
       { slug: "tasnim-mahmud-rifat", name: "Tasnim Mahmud Rifat", role: "General Secretary", series: "URP'19 Series", photo: "", email: "", linkedin: "", website: "", bio: "" },
       { slug: "towfiqur-rashid", name: "Towfiqur Rashid", role: "Asst. General Secretary", series: "URP'20 Series", photo: "", email: "", linkedin: "", website: "", bio: "" },
